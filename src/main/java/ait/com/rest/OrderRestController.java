@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import ait.com.entity.Order;
 import ait.com.service.OrderService;
 
-@RestController("/rest")
+@RestController
 public class OrderRestController {
 	@Autowired
 	private OrderService orderService;
