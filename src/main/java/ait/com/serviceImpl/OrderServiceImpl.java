@@ -4,14 +4,17 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import ait.com.entity.Order;
 import ait.com.exception.OrderNotFoundException;
 import ait.com.repo.OrderRepository;
 import ait.com.service.OrderService;
+@Service
 
 public class OrderServiceImpl implements OrderService{
-
+	
+	
 	@Autowired
 	private OrderRepository orderRepository;
 	

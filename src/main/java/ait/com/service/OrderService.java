@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import ait.com.entity.Order;
-@Service
+
 public interface OrderService {
 
 	public boolean saveOrder(Order order);
