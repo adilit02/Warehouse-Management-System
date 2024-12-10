@@ -2,8 +2,10 @@ package ait.com.service;
 
 import java.util.List;
 
-import ait.com.entity.Order;
+import org.springframework.stereotype.Service;
 
+import ait.com.entity.Order;
+@Service
 public interface OrderService {
 
 	public boolean saveOrder(Order order);

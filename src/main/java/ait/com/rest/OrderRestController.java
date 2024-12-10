@@ -12,15 +12,17 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import ait.com.entity.Order;
 import ait.com.service.OrderService;
 
+@RestController("/rest")
 public class OrderRestController {
 	@Autowired
 	private OrderService orderService;
 	
-	@GetMapping("/all")
+	@GetMapping("/orderAll")
 	public ResponseEntity<?> getAllUoms(){
 		ResponseEntity<?> response = null;
 		
@@ -36,7 +38,7 @@ public class OrderRestController {
 	}
 	
 	
-	@PostMapping("/save")
+	@PostMapping("/orderSave")
 	public ResponseEntity<String> saveOrder(@RequestBody Order order){
 	   ResponseEntity<String> response = null;
 	   try{
@@ -50,7 +52,7 @@ public class OrderRestController {
 	   return response;
 	}
 	
-	@GetMapping("/edit/{id}")
+	@GetMapping("/orderEdit/{id}")
 	public ResponseEntity<?>  editOrder(@PathVariable("id") Integer id){
 	   ResponseEntity<?> response = null;
 	   try{
@@ -62,7 +64,7 @@ public class OrderRestController {
 	  return response ;
 	}
 	
-	@PutMapping("/update/{id}")
+	@PutMapping("/orderUpdate/{id}")
 	public ResponseEntity<?> updateOrder(@PathVariable("id") Integer id , @RequestBody Order order){
 		ResponseEntity<?> response = null;
 		
@@ -78,7 +80,7 @@ public class OrderRestController {
 		
 		return response;
 	}
-	@DeleteMapping("/delete/{id}")
+	@DeleteMapping("/orderDelete/{id}")
 	public ResponseEntity<String> deleteStudent(@PathVariable("id") Integer id ){
 		ResponseEntity<String> response = null;
 		
