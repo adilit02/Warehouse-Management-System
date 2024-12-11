@@ -1,8 +1,8 @@
-package ait.com.controller;
+package ait.com.controllar;
 
 import org.springframework.stereotype.Controller;
 
 @Controller
-public class UomController {
+public class Uomcontrollar {
 
 }

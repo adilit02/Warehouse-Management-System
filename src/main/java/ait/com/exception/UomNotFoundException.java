@@ -1,17 +1,17 @@
 package ait.com.exception;
 
-public class UomNotFoundException extends RuntimeException{
+public class UomNotFoundException extends RuntimeException {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = -8694551836270488038L;
+	
+	private static final long serialVersionUID = 1L;
 
-	public UomNotFoundException() {
+	UomNotFoundException()
+	{
 		
 	}
 	
-	public UomNotFoundException(String msg) {
+	public UomNotFoundException(String msg)
+	{
 		super(msg);
 	}
 }

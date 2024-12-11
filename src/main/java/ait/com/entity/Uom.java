@@ -11,13 +11,12 @@ import lombok.Data;
 @Entity
 @Table(name = "uom_table")
 public class Uom {
-
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer uomId;
+	private Integer uomid;
 	private String uomType;
 	private double length;
 	private double width;
 	private double hieght;
-	
+
 }
