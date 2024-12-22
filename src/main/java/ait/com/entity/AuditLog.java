@@ -1,5 +1,5 @@
 package ait.com.entity;
-
+import java.time.LocalDateTime;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -9,15 +9,20 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "uom_table")
-public class Uom {
+@Table(name = "audit_logs")
+public class AuditLog {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer uomId;
-	private String uomType;
-	private double length;
-	private double width;
-	private double hieght;
+
+	private Integer id;
+
+	private String action;
+
+	private String details;
+
+	private Integer userId;
+
+	private LocalDateTime createdAt = LocalDateTime.now();
 
 }

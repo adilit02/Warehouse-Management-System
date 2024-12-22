@@ -9,15 +9,20 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "uom_table")
-public class Uom {
+@Table(name = "order_items")
+public class OrderItem {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer uomId;
-	private String uomType;
-	private double length;
-	private double width;
-	private double hieght;
+	
+	private Integer id;
+	
+	private Long orderId;
+	
+	private Long inventoryId;
+	
+	private Integer quantity;
+	
+	private Double price;
 
 }
